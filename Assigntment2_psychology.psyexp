@@ -77,7 +77,7 @@
       </KeyboardComponent>
     </Routine>
     <Routine name="Blank">
-      <TextComponent name="text_3">
+      <TextComponent name="Fixation">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -85,34 +85,8 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
-        <Param name="name" updates="None" val="text_3" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="0.3" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="" valType="str"/>
-        <Param name="units" updates="None" val="from exp settings" valType="str"/>
-        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
-      </TextComponent>
-    </Routine>
-    <Routine name="Trial_exo">
-      <TextComponent name="text">
-        <Param name="color" updates="constant" val="white" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flip" updates="constant" val="" valType="str"/>
-        <Param name="font" updates="constant" val="Arial" valType="str"/>
-        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.3" valType="code"/>
-        <Param name="name" updates="None" val="text" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.15" valType="code"/>
+        <Param name="name" updates="None" val="Fixation" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
@@ -127,6 +101,32 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
+    </Routine>
+    <Routine name="Trial_exo">
+      <TextComponent name="Fixation_point">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.15" valType="code"/>
+        <Param name="name" updates="None" val="Fixation_point" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="0.9" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="+" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
       <PolygonComponent name="rect_left">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
@@ -135,12 +135,12 @@
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="lineWidth" updates="constant" val="7" valType="code"/>
+        <Param name="lineWidth" updates="constant" val="8" valType="code"/>
         <Param name="nVertices" updates="constant" val="4" valType="int"/>
         <Param name="name" updates="None" val="rect_left" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-6, 0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-7, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
         <Param name="size" updates="constant" val="(6, 6)" valType="code"/>
@@ -160,12 +160,12 @@
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="lineWidth" updates="constant" val="7" valType="code"/>
+        <Param name="lineWidth" updates="constant" val="8" valType="code"/>
         <Param name="nVertices" updates="constant" val="4" valType="int"/>
         <Param name="name" updates="None" val="rect_right" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(6, 0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(7, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
         <Param name="size" updates="constant" val="(6,6)" valType="code"/>
@@ -185,7 +185,7 @@
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="lineColor" updates="constant" val="$[255, 255, 0]" valType="str"/>
         <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="lineWidth" updates="constant" val="7" valType="code"/>
+        <Param name="lineWidth" updates="constant" val="9" valType="code"/>
         <Param name="nVertices" updates="constant" val="4" valType="int"/>
         <Param name="name" updates="None" val="rect_highlight" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
@@ -315,14 +315,14 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <KeyboardComponent name="key_resp_3">
+      <KeyboardComponent name="resp_endo">
         <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="name" updates="None" val="key_resp_3" valType="code"/>
+        <Param name="name" updates="None" val="resp_endo" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -335,7 +335,7 @@
       </KeyboardComponent>
     </Routine>
     <Routine name="Trial_endo">
-      <TextComponent name="text_2">
+      <TextComponent name="fixationPoint">
         <Param name="color" updates="constant" val="white" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -343,8 +343,8 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.3" valType="code"/>
-        <Param name="name" updates="None" val="text_2" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.15" valType="code"/>
+        <Param name="name" updates="None" val="fixationPoint" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
@@ -353,7 +353,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="0.2" valType="code"/>
+        <Param name="stopVal" updates="constant" val="0.9" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="+" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
@@ -372,7 +372,7 @@
         <Param name="name" updates="None" val="rect_left_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(-6, 0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-7, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
         <Param name="size" updates="constant" val="(6, 6)" valType="code"/>
@@ -397,7 +397,7 @@
         <Param name="name" updates="None" val="rect_right_2" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(6, 0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(7, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="shape" updates="constant" val="rectangle" valType="str"/>
         <Param name="size" updates="constant" val="(6, 6)" valType="code"/>
