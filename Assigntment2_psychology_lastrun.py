@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
-    on October 08, 2019, at 04:45
+    on October 08, 2019, at 17:11
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -49,7 +49,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\ruhma\\Desktop\\psych_ass2\\Assigntment2_psychology_lastrun.py',
+    originPath='C:\\Users\\ruhma\\Desktop\\psych\\Assigntment2_psychology_lastrun.py',
     savePickle=True, saveWideText=False,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -97,35 +97,34 @@ text = visual.TextStim(win=win, name='text',
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
-stimuli_resp = keyboard.Keyboard()
 rect_left = visual.Rect(
     win=win, name='rect_left',units='cm', 
     width=(6, 6)[0], height=(6, 6)[1],
     ori=0, pos=(-6, 0),
     lineWidth=7, lineColor=[1,1,1], lineColorSpace='rgb',
     fillColor=[0,0,0], fillColorSpace='hsv',
-    opacity=1, depth=-2.0, interpolate=True)
+    opacity=1, depth=-1.0, interpolate=True)
 rect_right = visual.Rect(
     win=win, name='rect_right',units='cm', 
     width=(6,6)[0], height=(6,6)[1],
     ori=0, pos=(6, 0),
     lineWidth=7, lineColor=[1,1,1], lineColorSpace='rgb',
     fillColor=[0,0,0], fillColorSpace='hsv',
-    opacity=1, depth=-3.0, interpolate=True)
+    opacity=1, depth=-2.0, interpolate=True)
 rect_highlight = visual.Rect(
     win=win, name='rect_highlight',units='cm', 
     width=(6,6)[0], height=(6,6)[1],
     ori=0, pos=[0,0],
     lineWidth=7, lineColor=[255, 255, 0], lineColorSpace='rgb',
     fillColor=[0,0,0], fillColorSpace='hsv',
-    opacity=1, depth=-4.0, interpolate=True)
+    opacity=1, depth=-3.0, interpolate=True)
 cross_cue = visual.ShapeStim(
     win=win, name='cross_cue', vertices='cross',units='cm', 
     size=(2, 2),
     ori=45, pos=[0,0],
     lineWidth=1, lineColor=[255, 255, 0], lineColorSpace='rgb',
     fillColor=[255, 255, 0], fillColorSpace='rgb',
-    opacity=1, depth=-5.0, interpolate=True)
+    opacity=1, depth=-4.0, interpolate=True)
 resp_stimuli = keyboard.Keyboard()
 
 # Initialize components for Routine "Blank"
@@ -174,20 +173,13 @@ Arrow = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-4.0)
-rect_highlight_2 = visual.Rect(
-    win=win, name='rect_highlight_2',units='cm', 
-    width=(6, 6)[0], height=(6, 6)[1],
-    ori=0, pos=[0,0],
-    lineWidth=7, lineColor=[255,255,0], lineColorSpace='rgb',
-    fillColor=[0,0,0], fillColorSpace='hsv',
-    opacity=1, depth=-5.0, interpolate=True)
 cross_cue_2 = visual.ShapeStim(
     win=win, name='cross_cue_2', vertices='cross',units='cm', 
     size=(2, 2),
     ori=45, pos=[0,0],
     lineWidth=1, lineColor=[255, 255, 0], lineColorSpace='rgb',
     fillColor=[255, 255, 0], fillColorSpace='rgb',
-    opacity=1, depth=-6.0, interpolate=True)
+    opacity=1, depth=-5.0, interpolate=True)
 resp_stimuli_2 = keyboard.Keyboard()
 
 # Initialize components for Routine "Thankyou"
@@ -324,15 +316,14 @@ for thisTrial in trials:
             exec('{} = thisTrial[paramName]'.format(paramName))
     
     # ------Prepare to start Routine "Trial_exo"-------
+    routineTimer.add(0.600000)
     # update component parameters for each repeat
-    stimuli_resp.keys = []
-    stimuli_resp.rt = []
     rect_highlight.setPos(Pos_highlight_exo)
     cross_cue.setPos(Pos_cue_exo)
     resp_stimuli.keys = []
     resp_stimuli.rt = []
     # keep track of which components have finished
-    Trial_exoComponents = [text, stimuli_resp, rect_left, rect_right, rect_highlight, cross_cue, resp_stimuli]
+    Trial_exoComponents = [text, rect_left, rect_right, rect_highlight, cross_cue, resp_stimuli]
     for thisComponent in Trial_exoComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -348,7 +339,7 @@ for thisTrial in trials:
     continueRoutine = True
     
     # -------Run Routine "Trial_exo"-------
-    while continueRoutine:
+    while continueRoutine and routineTimer.getTime() > 0:
         # get current time
         t = Trial_exoClock.getTime()
         tThisFlip = win.getFutureFlipTime(clock=Trial_exoClock)
@@ -372,32 +363,6 @@ for thisTrial in trials:
                 text.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(text, 'tStopRefresh')  # time at next scr refresh
                 text.setAutoDraw(False)
-        
-        # *stimuli_resp* updates
-        waitOnFlip = False
-        if stimuli_resp.status == NOT_STARTED and tThisFlip >= 0.2-frameTolerance:
-            # keep track of start time/frame for later
-            stimuli_resp.frameNStart = frameN  # exact frame index
-            stimuli_resp.tStart = t  # local t and not account for scr refresh
-            stimuli_resp.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(stimuli_resp, 'tStartRefresh')  # time at next scr refresh
-            stimuli_resp.status = STARTED
-            # keyboard checking is just starting
-            waitOnFlip = True
-            win.callOnFlip(stimuli_resp.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(stimuli_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
-        if stimuli_resp.status == STARTED and not waitOnFlip:
-            theseKeys = stimuli_resp.getKeys(keyList=['left', 'right'], waitRelease=False)
-            if len(theseKeys):
-                theseKeys = theseKeys[0]  # at least one key was pressed
-                
-                # check for quit:
-                if "escape" == theseKeys:
-                    endExpNow = True
-                stimuli_resp.keys = theseKeys.name  # just the last key pressed
-                stimuli_resp.rt = theseKeys.rt
-                # a response ends the routine
-                continueRoutine = False
         
         # *rect_left* updates
         if rect_left.status == NOT_STARTED and tThisFlip >= 0.2-frameTolerance:
@@ -468,8 +433,7 @@ for thisTrial in trials:
                 cross_cue.setAutoDraw(False)
         
         # *resp_stimuli* updates
-        waitOnFlip = False
-        if resp_stimuli.status == NOT_STARTED and tThisFlip >= 0.2-frameTolerance:
+        if resp_stimuli.status == NOT_STARTED and t >= 0.2-frameTolerance:
             # keep track of start time/frame for later
             resp_stimuli.frameNStart = frameN  # exact frame index
             resp_stimuli.tStart = t  # local t and not account for scr refresh
@@ -477,10 +441,17 @@ for thisTrial in trials:
             win.timeOnFlip(resp_stimuli, 'tStartRefresh')  # time at next scr refresh
             resp_stimuli.status = STARTED
             # keyboard checking is just starting
-            waitOnFlip = True
-            win.callOnFlip(resp_stimuli.clock.reset)  # t=0 on next screen flip
-            win.callOnFlip(resp_stimuli.clearEvents, eventType='keyboard')  # clear events on next screen flip
-        if resp_stimuli.status == STARTED and not waitOnFlip:
+            resp_stimuli.clock.reset()  # now t=0
+            resp_stimuli.clearEvents(eventType='keyboard')
+        if resp_stimuli.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > resp_stimuli.tStartRefresh + 0.2-frameTolerance:
+                # keep track of stop time/frame for later
+                resp_stimuli.tStop = t  # not accounting for scr refresh
+                resp_stimuli.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(resp_stimuli, 'tStopRefresh')  # time at next scr refresh
+                resp_stimuli.status = FINISHED
+        if resp_stimuli.status == STARTED:
             theseKeys = resp_stimuli.getKeys(keyList=['left', 'right'], waitRelease=False)
             if len(theseKeys):
                 theseKeys = theseKeys[0]  # at least one key was pressed
@@ -488,8 +459,13 @@ for thisTrial in trials:
                 # check for quit:
                 if "escape" == theseKeys:
                     endExpNow = True
-                resp_stimuli.keys = theseKeys.name  # just the last key pressed
-                resp_stimuli.rt = theseKeys.rt
+                resp_stimuli.keys.append(theseKeys.name)  # storing all keys
+                resp_stimuli.rt.append(theseKeys.rt)
+                # was this 'correct'?
+                if (resp_stimuli.keys == str(correctresp_exo)) or (resp_stimuli.keys == correctresp_exo):
+                    resp_stimuli.corr = 1
+                else:
+                    resp_stimuli.corr = 0
                 # a response ends the routine
                 continueRoutine = False
         
@@ -516,14 +492,6 @@ for thisTrial in trials:
             thisComponent.setAutoDraw(False)
     trials.addData('text.started', text.tStartRefresh)
     trials.addData('text.stopped', text.tStopRefresh)
-    # check responses
-    if stimuli_resp.keys in ['', [], None]:  # No response was made
-        stimuli_resp.keys = None
-    trials.addData('stimuli_resp.keys',stimuli_resp.keys)
-    if stimuli_resp.keys != None:  # we had a response
-        trials.addData('stimuli_resp.rt', stimuli_resp.rt)
-    trials.addData('stimuli_resp.started', stimuli_resp.tStartRefresh)
-    trials.addData('stimuli_resp.stopped', stimuli_resp.tStopRefresh)
     trials.addData('rect_left.started', rect_left.tStartRefresh)
     trials.addData('rect_left.stopped', rect_left.tStopRefresh)
     trials.addData('rect_right.started', rect_right.tStartRefresh)
@@ -535,13 +503,18 @@ for thisTrial in trials:
     # check responses
     if resp_stimuli.keys in ['', [], None]:  # No response was made
         resp_stimuli.keys = None
+        # was no response the correct answer?!
+        if str(correctresp_exo).lower() == 'none':
+           resp_stimuli.corr = 1;  # correct non-response
+        else:
+           resp_stimuli.corr = 0;  # failed to respond (incorrectly)
+    # store data for trials (TrialHandler)
     trials.addData('resp_stimuli.keys',resp_stimuli.keys)
+    trials.addData('resp_stimuli.corr', resp_stimuli.corr)
     if resp_stimuli.keys != None:  # we had a response
         trials.addData('resp_stimuli.rt', resp_stimuli.rt)
-    trials.addData('resp_stimuli.started', resp_stimuli.tStartRefresh)
-    trials.addData('resp_stimuli.stopped', resp_stimuli.tStopRefresh)
-    # the Routine "Trial_exo" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset()
+    trials.addData('resp_stimuli.started', resp_stimuli.tStart)
+    trials.addData('resp_stimuli.stopped', resp_stimuli.tStop)
     
     # ------Prepare to start Routine "Blank"-------
     # update component parameters for each repeat
@@ -593,8 +566,6 @@ for thisTrial in trials:
             thisComponent.setAutoDraw(False)
     # the Routine "Blank" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
-    thisExp.nextEntry()
-    
 # completed 3 repeats of 'trials'
 
 
@@ -721,12 +692,11 @@ for thisTrial_2 in trials_2:
     stimuli_resp_2.keys = []
     stimuli_resp_2.rt = []
     Arrow.setImage(Image_arrow)
-    rect_highlight_2.setPos(Pos_highlight_endo)
     cross_cue_2.setPos(Pos_cue_exo)
     resp_stimuli_2.keys = []
     resp_stimuli_2.rt = []
     # keep track of which components have finished
-    Trial_endoComponents = [text_2, stimuli_resp_2, rect_left_2, rect_right_2, Arrow, rect_highlight_2, cross_cue_2, resp_stimuli_2]
+    Trial_endoComponents = [text_2, stimuli_resp_2, rect_left_2, rect_right_2, Arrow, cross_cue_2, resp_stimuli_2]
     for thisComponent in Trial_endoComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -781,7 +751,7 @@ for thisTrial_2 in trials_2:
             win.callOnFlip(stimuli_resp_2.clock.reset)  # t=0 on next screen flip
             win.callOnFlip(stimuli_resp_2.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if stimuli_resp_2.status == STARTED and not waitOnFlip:
-            theseKeys = stimuli_resp_2.getKeys(keyList=['left', 'right'], waitRelease=False)
+            theseKeys = stimuli_resp_2.getKeys(keyList=['space'], waitRelease=False)
             if len(theseKeys):
                 theseKeys = theseKeys[0]  # at least one key was pressed
                 
@@ -837,32 +807,15 @@ for thisTrial_2 in trials_2:
             Arrow.setAutoDraw(True)
         if Arrow.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > Arrow.tStartRefresh + 0.2-frameTolerance:
+            if tThisFlipGlobal > Arrow.tStartRefresh + 0.3-frameTolerance:
                 # keep track of stop time/frame for later
                 Arrow.tStop = t  # not accounting for scr refresh
                 Arrow.frameNStop = frameN  # exact frame index
                 win.timeOnFlip(Arrow, 'tStopRefresh')  # time at next scr refresh
                 Arrow.setAutoDraw(False)
         
-        # *rect_highlight_2* updates
-        if rect_highlight_2.status == NOT_STARTED and tThisFlip >= 0.5-frameTolerance:
-            # keep track of start time/frame for later
-            rect_highlight_2.frameNStart = frameN  # exact frame index
-            rect_highlight_2.tStart = t  # local t and not account for scr refresh
-            rect_highlight_2.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(rect_highlight_2, 'tStartRefresh')  # time at next scr refresh
-            rect_highlight_2.setAutoDraw(True)
-        if rect_highlight_2.status == STARTED:
-            # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > rect_highlight_2.tStartRefresh + 0.3-frameTolerance:
-                # keep track of stop time/frame for later
-                rect_highlight_2.tStop = t  # not accounting for scr refresh
-                rect_highlight_2.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(rect_highlight_2, 'tStopRefresh')  # time at next scr refresh
-                rect_highlight_2.setAutoDraw(False)
-        
         # *cross_cue_2* updates
-        if cross_cue_2.status == NOT_STARTED and tThisFlip >= 0.8-frameTolerance:
+        if cross_cue_2.status == NOT_STARTED and tThisFlip >= 0.6-frameTolerance:
             # keep track of start time/frame for later
             cross_cue_2.frameNStart = frameN  # exact frame index
             cross_cue_2.tStart = t  # local t and not account for scr refresh
@@ -871,7 +824,7 @@ for thisTrial_2 in trials_2:
             cross_cue_2.setAutoDraw(True)
         if cross_cue_2.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > cross_cue_2.tStartRefresh + 0.2-frameTolerance:
+            if tThisFlipGlobal > cross_cue_2.tStartRefresh + 0.3-frameTolerance:
                 # keep track of stop time/frame for later
                 cross_cue_2.tStop = t  # not accounting for scr refresh
                 cross_cue_2.frameNStop = frameN  # exact frame index
@@ -880,7 +833,7 @@ for thisTrial_2 in trials_2:
         
         # *resp_stimuli_2* updates
         waitOnFlip = False
-        if resp_stimuli_2.status == NOT_STARTED and tThisFlip >= 1-frameTolerance:
+        if resp_stimuli_2.status == NOT_STARTED and tThisFlip >= 0.9-frameTolerance:
             # keep track of start time/frame for later
             resp_stimuli_2.frameNStart = frameN  # exact frame index
             resp_stimuli_2.tStart = t  # local t and not account for scr refresh
@@ -893,7 +846,7 @@ for thisTrial_2 in trials_2:
             win.callOnFlip(resp_stimuli_2.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if resp_stimuli_2.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > resp_stimuli_2.tStartRefresh + 0.2-frameTolerance:
+            if tThisFlipGlobal > resp_stimuli_2.tStartRefresh + 0.4-frameTolerance:
                 # keep track of stop time/frame for later
                 resp_stimuli_2.tStop = t  # not accounting for scr refresh
                 resp_stimuli_2.frameNStop = frameN  # exact frame index
@@ -909,6 +862,11 @@ for thisTrial_2 in trials_2:
                     endExpNow = True
                 resp_stimuli_2.keys = theseKeys.name  # just the last key pressed
                 resp_stimuli_2.rt = theseKeys.rt
+                # was this 'correct'?
+                if (resp_stimuli_2.keys == str(correctresp_endo)) or (resp_stimuli_2.keys == correctresp_endo):
+                    resp_stimuli_2.corr = 1
+                else:
+                    resp_stimuli_2.corr = 0
                 # a response ends the routine
                 continueRoutine = False
         
@@ -949,14 +907,19 @@ for thisTrial_2 in trials_2:
     trials_2.addData('rect_right_2.stopped', rect_right_2.tStopRefresh)
     trials_2.addData('Arrow.started', Arrow.tStartRefresh)
     trials_2.addData('Arrow.stopped', Arrow.tStopRefresh)
-    trials_2.addData('rect_highlight_2.started', rect_highlight_2.tStartRefresh)
-    trials_2.addData('rect_highlight_2.stopped', rect_highlight_2.tStopRefresh)
     trials_2.addData('cross_cue_2.started', cross_cue_2.tStartRefresh)
     trials_2.addData('cross_cue_2.stopped', cross_cue_2.tStopRefresh)
     # check responses
     if resp_stimuli_2.keys in ['', [], None]:  # No response was made
         resp_stimuli_2.keys = None
+        # was no response the correct answer?!
+        if str(correctresp_endo).lower() == 'none':
+           resp_stimuli_2.corr = 1;  # correct non-response
+        else:
+           resp_stimuli_2.corr = 0;  # failed to respond (incorrectly)
+    # store data for trials_2 (TrialHandler)
     trials_2.addData('resp_stimuli_2.keys',resp_stimuli_2.keys)
+    trials_2.addData('resp_stimuli_2.corr', resp_stimuli_2.corr)
     if resp_stimuli_2.keys != None:  # we had a response
         trials_2.addData('resp_stimuli_2.rt', resp_stimuli_2.rt)
     trials_2.addData('resp_stimuli_2.started', resp_stimuli_2.tStartRefresh)
