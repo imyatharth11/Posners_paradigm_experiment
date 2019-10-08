@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
-    on October 09, 2019, at 02:14
+    on October 09, 2019, at 02:56
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -99,32 +99,32 @@ resp_continue_exo = keyboard.Keyboard()
 
 # Initialize components for Routine "Trial_exo"
 Trial_exoClock = core.Clock()
-text = visual.TextStim(win=win, name='text',
+Fixation_point = visual.TextStim(win=win, name='Fixation_point',
     text='+',
     font='Arial',
-    pos=(0, 0), height=0.3, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.15, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 rect_left = visual.Rect(
     win=win, name='rect_left',units='cm', 
     width=(6, 6)[0], height=(6, 6)[1],
-    ori=0, pos=(-6, 0),
-    lineWidth=7, lineColor=[1,1,1], lineColorSpace='rgb',
+    ori=0, pos=(-7, 0),
+    lineWidth=8, lineColor=[1,1,1], lineColorSpace='rgb',
     fillColor=[0,0,0], fillColorSpace='hsv',
     opacity=1, depth=-1.0, interpolate=True)
 rect_right = visual.Rect(
     win=win, name='rect_right',units='cm', 
     width=(6,6)[0], height=(6,6)[1],
-    ori=0, pos=(6, 0),
-    lineWidth=7, lineColor=[1,1,1], lineColorSpace='rgb',
+    ori=0, pos=(7, 0),
+    lineWidth=8, lineColor=[1,1,1], lineColorSpace='rgb',
     fillColor=[0,0,0], fillColorSpace='hsv',
     opacity=1, depth=-2.0, interpolate=True)
 rect_highlight = visual.Rect(
     win=win, name='rect_highlight',units='cm', 
     width=(6,6)[0], height=(6,6)[1],
     ori=0, pos=[0,0],
-    lineWidth=7, lineColor=[255, 255, 0], lineColorSpace='rgb',
+    lineWidth=9, lineColor=[255, 255, 0], lineColorSpace='rgb',
     fillColor=[0,0,0], fillColorSpace='hsv',
     opacity=1, depth=-3.0, interpolate=True)
 cross_cue = visual.ShapeStim(
@@ -138,10 +138,10 @@ resp_stimuli = keyboard.Keyboard()
 
 # Initialize components for Routine "Blank"
 BlankClock = core.Clock()
-text_3 = visual.TextStim(win=win, name='text_3',
-    text=None,
+Fixation = visual.TextStim(win=win, name='Fixation',
+    text='+',
     font='Arial',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.15, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -155,28 +155,28 @@ Experiment_introduction_2 = visual.TextStim(win=win, name='Experiment_introducti
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
-key_resp_3 = keyboard.Keyboard()
+resp_endo = keyboard.Keyboard()
 
 # Initialize components for Routine "Trial_endo"
 Trial_endoClock = core.Clock()
-text_2 = visual.TextStim(win=win, name='text_2',
+fixationPoint = visual.TextStim(win=win, name='fixationPoint',
     text='+',
     font='Arial',
-    pos=(0, 0), height=0.3, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.15, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
 rect_left_2 = visual.Rect(
     win=win, name='rect_left_2',units='cm', 
     width=(6, 6)[0], height=(6, 6)[1],
-    ori=0, pos=(-6, 0),
+    ori=0, pos=(-7, 0),
     lineWidth=7, lineColor=[1,1,1], lineColorSpace='rgb',
     fillColor=[0,0,0], fillColorSpace='hsv',
     opacity=1, depth=-1.0, interpolate=True)
 rect_right_2 = visual.Rect(
     win=win, name='rect_right_2',units='cm', 
     width=(6, 6)[0], height=(6, 6)[1],
-    ori=0, pos=(6, 0),
+    ori=0, pos=(7, 0),
     lineWidth=7, lineColor=[1,1,1], lineColorSpace='rgb',
     fillColor=[0,0,0], fillColorSpace='hsv',
     opacity=1, depth=-2.0, interpolate=True)
@@ -199,10 +199,10 @@ resp_stimuli_2 = keyboard.Keyboard()
 
 # Initialize components for Routine "Blank"
 BlankClock = core.Clock()
-text_3 = visual.TextStim(win=win, name='text_3',
-    text=None,
+Fixation = visual.TextStim(win=win, name='Fixation',
+    text='+',
     font='Arial',
-    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.15, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -447,7 +447,7 @@ for thisTrial in trials:
     resp_stimuli.keys = []
     resp_stimuli.rt = []
     # keep track of which components have finished
-    Trial_exoComponents = [text, rect_left, rect_right, rect_highlight, cross_cue, resp_stimuli]
+    Trial_exoComponents = [Fixation_point, rect_left, rect_right, rect_highlight, cross_cue, resp_stimuli]
     for thisComponent in Trial_exoComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -471,22 +471,22 @@ for thisTrial in trials:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *text* updates
-        if text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *Fixation_point* updates
+        if Fixation_point.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text.frameNStart = frameN  # exact frame index
-            text.tStart = t  # local t and not account for scr refresh
-            text.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text, 'tStartRefresh')  # time at next scr refresh
-            text.setAutoDraw(True)
-        if text.status == STARTED:
+            Fixation_point.frameNStart = frameN  # exact frame index
+            Fixation_point.tStart = t  # local t and not account for scr refresh
+            Fixation_point.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(Fixation_point, 'tStartRefresh')  # time at next scr refresh
+            Fixation_point.setAutoDraw(True)
+        if Fixation_point.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > text.tStartRefresh + 0.2-frameTolerance:
+            if tThisFlipGlobal > Fixation_point.tStartRefresh + 0.9-frameTolerance:
                 # keep track of stop time/frame for later
-                text.tStop = t  # not accounting for scr refresh
-                text.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(text, 'tStopRefresh')  # time at next scr refresh
-                text.setAutoDraw(False)
+                Fixation_point.tStop = t  # not accounting for scr refresh
+                Fixation_point.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(Fixation_point, 'tStopRefresh')  # time at next scr refresh
+                Fixation_point.setAutoDraw(False)
         
         # *rect_left* updates
         if rect_left.status == NOT_STARTED and tThisFlip >= 0.2-frameTolerance:
@@ -613,8 +613,8 @@ for thisTrial in trials:
     for thisComponent in Trial_exoComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    trials.addData('text.started', text.tStartRefresh)
-    trials.addData('text.stopped', text.tStopRefresh)
+    trials.addData('Fixation_point.started', Fixation_point.tStartRefresh)
+    trials.addData('Fixation_point.stopped', Fixation_point.tStopRefresh)
     trials.addData('rect_left.started', rect_left.tStartRefresh)
     trials.addData('rect_left.stopped', rect_left.tStopRefresh)
     trials.addData('rect_right.started', rect_right.tStartRefresh)
@@ -640,10 +640,10 @@ for thisTrial in trials:
     trials.addData('resp_stimuli.stopped', resp_stimuli.tStopRefresh)
     
     # ------Prepare to start Routine "Blank"-------
-    routineTimer.add(0.300000)
+    routineTimer.add(0.200000)
     # update component parameters for each repeat
     # keep track of which components have finished
-    BlankComponents = [text_3]
+    BlankComponents = [Fixation]
     for thisComponent in BlankComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -667,22 +667,22 @@ for thisTrial in trials:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *text_3* updates
-        if text_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *Fixation* updates
+        if Fixation.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_3.frameNStart = frameN  # exact frame index
-            text_3.tStart = t  # local t and not account for scr refresh
-            text_3.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text_3, 'tStartRefresh')  # time at next scr refresh
-            text_3.setAutoDraw(True)
-        if text_3.status == STARTED:
+            Fixation.frameNStart = frameN  # exact frame index
+            Fixation.tStart = t  # local t and not account for scr refresh
+            Fixation.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(Fixation, 'tStartRefresh')  # time at next scr refresh
+            Fixation.setAutoDraw(True)
+        if Fixation.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > text_3.tStartRefresh + 0.3-frameTolerance:
+            if tThisFlipGlobal > Fixation.tStartRefresh + 0.2-frameTolerance:
                 # keep track of stop time/frame for later
-                text_3.tStop = t  # not accounting for scr refresh
-                text_3.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(text_3, 'tStopRefresh')  # time at next scr refresh
-                text_3.setAutoDraw(False)
+                Fixation.tStop = t  # not accounting for scr refresh
+                Fixation.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(Fixation, 'tStopRefresh')  # time at next scr refresh
+                Fixation.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -705,17 +705,17 @@ for thisTrial in trials:
     for thisComponent in BlankComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    trials.addData('text_3.started', text_3.tStartRefresh)
-    trials.addData('text_3.stopped', text_3.tStopRefresh)
+    thisExp.addData('Fixation.started', Fixation.tStartRefresh)
+    thisExp.addData('Fixation.stopped', Fixation.tStopRefresh)
 # completed 3 repeats of 'trials'
 
 
 # ------Prepare to start Routine "Introduction_endo"-------
 # update component parameters for each repeat
-key_resp_3.keys = []
-key_resp_3.rt = []
+resp_endo.keys = []
+resp_endo.rt = []
 # keep track of which components have finished
-Introduction_endoComponents = [Experiment_introduction_2, key_resp_3]
+Introduction_endoComponents = [Experiment_introduction_2, resp_endo]
 for thisComponent in Introduction_endoComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -748,29 +748,29 @@ while continueRoutine:
         win.timeOnFlip(Experiment_introduction_2, 'tStartRefresh')  # time at next scr refresh
         Experiment_introduction_2.setAutoDraw(True)
     
-    # *key_resp_3* updates
+    # *resp_endo* updates
     waitOnFlip = False
-    if key_resp_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    if resp_endo.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        key_resp_3.frameNStart = frameN  # exact frame index
-        key_resp_3.tStart = t  # local t and not account for scr refresh
-        key_resp_3.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(key_resp_3, 'tStartRefresh')  # time at next scr refresh
-        key_resp_3.status = STARTED
+        resp_endo.frameNStart = frameN  # exact frame index
+        resp_endo.tStart = t  # local t and not account for scr refresh
+        resp_endo.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(resp_endo, 'tStartRefresh')  # time at next scr refresh
+        resp_endo.status = STARTED
         # keyboard checking is just starting
         waitOnFlip = True
-        win.callOnFlip(key_resp_3.clock.reset)  # t=0 on next screen flip
-        win.callOnFlip(key_resp_3.clearEvents, eventType='keyboard')  # clear events on next screen flip
-    if key_resp_3.status == STARTED and not waitOnFlip:
-        theseKeys = key_resp_3.getKeys(keyList=['space'], waitRelease=False)
+        win.callOnFlip(resp_endo.clock.reset)  # t=0 on next screen flip
+        win.callOnFlip(resp_endo.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if resp_endo.status == STARTED and not waitOnFlip:
+        theseKeys = resp_endo.getKeys(keyList=['space'], waitRelease=False)
         if len(theseKeys):
             theseKeys = theseKeys[0]  # at least one key was pressed
             
             # check for quit:
             if "escape" == theseKeys:
                 endExpNow = True
-            key_resp_3.keys = theseKeys.name  # just the last key pressed
-            key_resp_3.rt = theseKeys.rt
+            resp_endo.keys = theseKeys.name  # just the last key pressed
+            resp_endo.rt = theseKeys.rt
             # a response ends the routine
             continueRoutine = False
     
@@ -798,13 +798,13 @@ for thisComponent in Introduction_endoComponents:
 thisExp.addData('Experiment_introduction_2.started', Experiment_introduction_2.tStartRefresh)
 thisExp.addData('Experiment_introduction_2.stopped', Experiment_introduction_2.tStopRefresh)
 # check responses
-if key_resp_3.keys in ['', [], None]:  # No response was made
-    key_resp_3.keys = None
-thisExp.addData('key_resp_3.keys',key_resp_3.keys)
-if key_resp_3.keys != None:  # we had a response
-    thisExp.addData('key_resp_3.rt', key_resp_3.rt)
-thisExp.addData('key_resp_3.started', key_resp_3.tStartRefresh)
-thisExp.addData('key_resp_3.stopped', key_resp_3.tStopRefresh)
+if resp_endo.keys in ['', [], None]:  # No response was made
+    resp_endo.keys = None
+thisExp.addData('resp_endo.keys',resp_endo.keys)
+if resp_endo.keys != None:  # we had a response
+    thisExp.addData('resp_endo.rt', resp_endo.rt)
+thisExp.addData('resp_endo.started', resp_endo.tStartRefresh)
+thisExp.addData('resp_endo.stopped', resp_endo.tStopRefresh)
 thisExp.nextEntry()
 # the Routine "Introduction_endo" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
@@ -836,7 +836,7 @@ for thisTrial_2 in trials_2:
     resp_stimuli_2.keys = []
     resp_stimuli_2.rt = []
     # keep track of which components have finished
-    Trial_endoComponents = [text_2, rect_left_2, rect_right_2, Arrow, cross_cue_2, resp_stimuli_2]
+    Trial_endoComponents = [fixationPoint, rect_left_2, rect_right_2, Arrow, cross_cue_2, resp_stimuli_2]
     for thisComponent in Trial_endoComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -860,22 +860,22 @@ for thisTrial_2 in trials_2:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *text_2* updates
-        if text_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *fixationPoint* updates
+        if fixationPoint.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_2.frameNStart = frameN  # exact frame index
-            text_2.tStart = t  # local t and not account for scr refresh
-            text_2.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text_2, 'tStartRefresh')  # time at next scr refresh
-            text_2.setAutoDraw(True)
-        if text_2.status == STARTED:
+            fixationPoint.frameNStart = frameN  # exact frame index
+            fixationPoint.tStart = t  # local t and not account for scr refresh
+            fixationPoint.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(fixationPoint, 'tStartRefresh')  # time at next scr refresh
+            fixationPoint.setAutoDraw(True)
+        if fixationPoint.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > text_2.tStartRefresh + 0.2-frameTolerance:
+            if tThisFlipGlobal > fixationPoint.tStartRefresh + 0.9-frameTolerance:
                 # keep track of stop time/frame for later
-                text_2.tStop = t  # not accounting for scr refresh
-                text_2.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(text_2, 'tStopRefresh')  # time at next scr refresh
-                text_2.setAutoDraw(False)
+                fixationPoint.tStop = t  # not accounting for scr refresh
+                fixationPoint.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(fixationPoint, 'tStopRefresh')  # time at next scr refresh
+                fixationPoint.setAutoDraw(False)
         
         # *rect_left_2* updates
         if rect_left_2.status == NOT_STARTED and tThisFlip >= 0.2-frameTolerance:
@@ -1005,8 +1005,8 @@ for thisTrial_2 in trials_2:
     for thisComponent in Trial_endoComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    trials_2.addData('text_2.started', text_2.tStartRefresh)
-    trials_2.addData('text_2.stopped', text_2.tStopRefresh)
+    trials_2.addData('fixationPoint.started', fixationPoint.tStartRefresh)
+    trials_2.addData('fixationPoint.stopped', fixationPoint.tStopRefresh)
     trials_2.addData('rect_left_2.started', rect_left_2.tStartRefresh)
     trials_2.addData('rect_left_2.stopped', rect_left_2.tStopRefresh)
     trials_2.addData('rect_right_2.started', rect_right_2.tStartRefresh)
@@ -1032,10 +1032,10 @@ for thisTrial_2 in trials_2:
     trials_2.addData('resp_stimuli_2.stopped', resp_stimuli_2.tStopRefresh)
     
     # ------Prepare to start Routine "Blank"-------
-    routineTimer.add(0.300000)
+    routineTimer.add(0.200000)
     # update component parameters for each repeat
     # keep track of which components have finished
-    BlankComponents = [text_3]
+    BlankComponents = [Fixation]
     for thisComponent in BlankComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -1059,22 +1059,22 @@ for thisTrial_2 in trials_2:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *text_3* updates
-        if text_3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *Fixation* updates
+        if Fixation.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_3.frameNStart = frameN  # exact frame index
-            text_3.tStart = t  # local t and not account for scr refresh
-            text_3.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(text_3, 'tStartRefresh')  # time at next scr refresh
-            text_3.setAutoDraw(True)
-        if text_3.status == STARTED:
+            Fixation.frameNStart = frameN  # exact frame index
+            Fixation.tStart = t  # local t and not account for scr refresh
+            Fixation.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(Fixation, 'tStartRefresh')  # time at next scr refresh
+            Fixation.setAutoDraw(True)
+        if Fixation.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > text_3.tStartRefresh + 0.3-frameTolerance:
+            if tThisFlipGlobal > Fixation.tStartRefresh + 0.2-frameTolerance:
                 # keep track of stop time/frame for later
-                text_3.tStop = t  # not accounting for scr refresh
-                text_3.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(text_3, 'tStopRefresh')  # time at next scr refresh
-                text_3.setAutoDraw(False)
+                Fixation.tStop = t  # not accounting for scr refresh
+                Fixation.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(Fixation, 'tStopRefresh')  # time at next scr refresh
+                Fixation.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1097,8 +1097,8 @@ for thisTrial_2 in trials_2:
     for thisComponent in BlankComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    trials_2.addData('text_3.started', text_3.tStartRefresh)
-    trials_2.addData('text_3.stopped', text_3.tStopRefresh)
+    thisExp.addData('Fixation.started', Fixation.tStartRefresh)
+    thisExp.addData('Fixation.stopped', Fixation.tStopRefresh)
     thisExp.nextEntry()
     
 # completed 2 repeats of 'trials_2'
