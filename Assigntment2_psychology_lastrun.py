@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
-    on October 09, 2019, at 02:56
+    on October 09, 2019, at 13:47
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -421,7 +421,7 @@ thisExp.nextEntry()
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-trials = data.TrialHandler(nReps=3, method='random', 
+trials = data.TrialHandler(nReps=4, method='random', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('experiment.xlsx'),
     seed=None, name='trials')
@@ -705,9 +705,9 @@ for thisTrial in trials:
     for thisComponent in BlankComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('Fixation.started', Fixation.tStartRefresh)
-    thisExp.addData('Fixation.stopped', Fixation.tStopRefresh)
-# completed 3 repeats of 'trials'
+    trials.addData('Fixation.started', Fixation.tStartRefresh)
+    trials.addData('Fixation.stopped', Fixation.tStopRefresh)
+# completed 4 repeats of 'trials'
 
 
 # ------Prepare to start Routine "Introduction_endo"-------
@@ -810,7 +810,7 @@ thisExp.nextEntry()
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-trials_2 = data.TrialHandler(nReps=2, method='random', 
+trials_2 = data.TrialHandler(nReps=4, method='random', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('experiment.xlsx'),
     seed=None, name='trials_2')
@@ -1097,11 +1097,11 @@ for thisTrial_2 in trials_2:
     for thisComponent in BlankComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    thisExp.addData('Fixation.started', Fixation.tStartRefresh)
-    thisExp.addData('Fixation.stopped', Fixation.tStopRefresh)
+    trials_2.addData('Fixation.started', Fixation.tStartRefresh)
+    trials_2.addData('Fixation.stopped', Fixation.tStopRefresh)
     thisExp.nextEntry()
     
-# completed 2 repeats of 'trials_2'
+# completed 4 repeats of 'trials_2'
 
 # get names of stimulus parameters
 if trials_2.trialList in ([], [None], None):
