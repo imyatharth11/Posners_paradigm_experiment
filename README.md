@@ -1,12 +1,12 @@
-#Posners_paradigm_experiment#
+**Posners_paradigm_experiment**
 
-##To run:##
+**To run:**
 
 pip install -r requirements.txt
 
-###Windows###
+*Windows
 
-python Posners_paradigm_experiment.py 
+-python Posners_paradigm_experiment.py 
 
-###Linux###
-python3 Posners_paradigm_experiment.py 
+*Linux
+-python3 Posners_paradigm_experiment.py 
