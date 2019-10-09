@@ -1,8 +1,12 @@
-Posners_paradigm_experiment" 
+#Posners_paradigm_experiment#
 
-To run:
+##To run:##
 
-Type "pip install -r requirements.txt", 
+pip install -r requirements.txt
 
-Then run the Posners_paradigm_experiment.py file to take the experiment
+###Windows###
 
+python Posners_paradigm_experiment.py 
+
+###Linux###
+python3 Posners_paradigm_experiment.py 
